@@ -39,8 +39,6 @@ try:
     
 except URLError as e:
   streamlit.error()
-    
-streamlit.stop()
 
 streamlit.header("The fruit load list contains:")
 # Sbowflake related functions
@@ -58,4 +56,3 @@ if streamlit.button('Get Fruit Load List'):
 # Allow the end user to add a fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like information about?','jackfruit')
 fruityvice_response = my_cur.fetchall()
-my_cur.execute("insert into FRUIT_LOAD_LIST values ('from streamlit');")
